@@ -1,0 +1,13 @@
+name : Test secret and variable
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  disp-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show-secret
+      - run : echo ${{ secrets.THIS_IS_SECRET }}
